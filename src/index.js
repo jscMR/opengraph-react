@@ -255,7 +255,7 @@ export default class OpengraphReactComponent extends Component {
           </div>
           <div className={"textWrapperSmall"}>
             <div className={"siteNameLinkWrapper"}>
-              <a href={resultsToUse.url} target={this.props.titleTarget || ''}>{resultsToUse.site_name}</a>
+              <a href="">{resultsToUse.site_name}</a>
             </div>
             <div className={"titleWrapper"}>
               <p>{resultsToUse.title}</p>
