@@ -262,7 +262,6 @@ export default class OpengraphReactComponent extends Component {
             </div>
             <p>{resultsToUse.description}</p>
           </div>
-
         </div>
       )
     }

@@ -38,5 +38,6 @@ Simply install using npm:
 |onlyFetch|boolean|If this prop is supplied then no card will display, but instead the results from opengraph will be passed as props to the components children|
 |acceptLang|string|accept lang header for request, defaults to "auto"|
 |useProxy|boolean|Tells opengraph whether or not to use a proxy (defaults to false)|
+|titleTarget|string|The target attribute specifies where to open the linked document. _blank, _self, _parent, _top, framename. defaults target=""|
 |forceCacheUpdate|boolean|If this is supplied opengraph will not reply with cached result (defaults to false)|
 |dontUseVideo|boolean|Component will default to supplying a video player if it finds one in the results, pass this prop to override that behavior and just display an image like normal|
