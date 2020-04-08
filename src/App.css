@@ -81,7 +81,6 @@
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 300px;
   width: 100%;
   line-height: 1.4;
   font-weight: 400;
