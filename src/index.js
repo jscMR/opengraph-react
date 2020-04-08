@@ -150,7 +150,7 @@ export default class OpengraphReactComponent extends Component {
         </div>
         <div className={"textWrapperSmall"}>
           <div className={"siteNameLinkWrapper"}>
-            <a href={""}>{goodProduct.name}</a>
+            <a >{goodProduct.name}</a>
           </div>
           <div className={"titleWrapper"}>
             {goodOffer && this.renderPrice(goodOffer, resultsToUse)}
@@ -181,7 +181,7 @@ export default class OpengraphReactComponent extends Component {
         </div>
         <div className={"textWrapperLarge"}>
           <div className={"siteNameLinkWrapper"}>
-            <a href={""}>{goodProduct.name}</a>
+            <a >{goodProduct.name}</a>
           </div>
           <div className={"titleWrapper"}>
             {goodOffer && this.renderPrice(goodOffer, resultsToUse)}
@@ -225,7 +225,7 @@ export default class OpengraphReactComponent extends Component {
         { feature }
         <div className={"textWrapperLarge"}>
           <div className={"siteNameLinkWrapper"}>
-            <a href={""}>{resultsToUse.site_name}</a>
+            <a >{resultsToUse.site_name}</a>
           </div>
           <div className={"titleWrapper"}>
             <p>{resultsToUse.title}</p>
