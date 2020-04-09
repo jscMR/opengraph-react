@@ -225,10 +225,11 @@ export default class OpengraphReactComponent extends Component {
         { feature }
         <div className={"textWrapperLarge"}>
           <div className={"siteNameLinkWrapper"}>
-            <a >{resultsToUse.site_name}</a>
+            {/* <a >{resultsToUse.site_name}</a> */}
+            <a>{resultsToUse.title}</a>
           </div>
           <div className={"titleWrapper"}>
-            <p>{resultsToUse.title}</p>
+            {/* <p>{resultsToUse.title}</p> */}
           </div>
           <p>{resultsToUse.description}</p>
         </div>
