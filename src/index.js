@@ -17,7 +17,7 @@ export default class OpengraphReactComponent extends Component {
       const acceptLang = this.props.acceptLang || 'auto';
       const appId = this.props.appId;
       const site = encodeURIComponent(this.props.site);
-      const url = `https://opengraph.io/api/1.1/site/${site}?accept_lang${acceptLang}&app_id=${appId}`;
+      const url = `https://opengraph.io/api/1.1/site/${site}?accept_lang${acceptLang}&app_id=${appId}&cache_ok=false`;
 
       if(useProxy){
         url = url + '&use_proxy=true'
