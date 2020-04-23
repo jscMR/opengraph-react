@@ -106,6 +106,14 @@
   font-size: 13px;
 }
 
+.textWrapperLarge p {
+  margin-top: 1em;
+}
+
+.textWrapperSmall p {
+  margin-top: 1em;
+}
+
 .textAlignLeft{
   text-align: left;
 }
@@ -114,7 +122,6 @@
   max-height: 2.8em;
   color: #000;
   font-weight: 700;
-  margin-bottom: .5em;
   padding-bottom: 25px;
 }
 
