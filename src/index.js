@@ -17,13 +17,13 @@ export default class OpengraphReactComponent extends Component {
       const acceptLang = this.props.acceptLang || 'auto';
       const appId = this.props.appId;
       const site = encodeURIComponent(this.props.site);
-      const url = `https://opengraph.io/api/1.1/site/${site}?accept_lang${acceptLang}&app_id=${appId}&cache_ok=false`;
+      const url = `https://opengraph.io/api/1.1/site/${site}?accept_lang${acceptLang}&app_id=${appId}&cache_ok=true&max_cache_age=7200000`;
 
       if(useProxy){
         url = url + '&use_proxy=true'
       }
       if(forceCacheUpdate){
-        url = url + '&cache_ok=false';
+        url = url + '&&';
       }
       if(fullRender){
         url = url + '&full_render=true';
@@ -32,7 +32,6 @@ export default class OpengraphReactComponent extends Component {
       fetch(url)
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
           if(!result.error){
             this.setState({result})
           } else {
@@ -294,12 +293,10 @@ export default class OpengraphReactComponent extends Component {
         return this.passResultsToChildren();
       } else {
         let resultsToUse = this.getResultsToUse();
-        console.log('RESULTS TO USE', resultsToUse);
         const size = this.props.size || 'large';
         if(size === 'large'){
           return this.renderLarge(resultsToUse)
         } else {
-          console.log('renderingSmall');
           return this.renderSmall(resultsToUse)
         }
       }
