@@ -91,6 +91,28 @@
   hyphens: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  min-height: 200px;
+}
+
+.urlOnlyWrapperLarge {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: auto;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.urlOnlyWrapperLarge a {
+  padding: 8px;
 }
 
 .imgWrapperLarge{

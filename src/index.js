@@ -199,7 +199,7 @@ export default class OpengraphReactComponent extends Component {
 
     if (!resultsToUse.image && !resultsToUse.title) {
       return (
-        <div className="wrapperLarge">
+        <div className="urlOnlyWrapperLarge">
           <a href={resultsToUse.url} target="_blank">{resultsToUse.url}</a>
         </div>
       )
