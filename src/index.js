@@ -197,6 +197,14 @@ export default class OpengraphReactComponent extends Component {
 
     let feature = null;
 
+    if (!resultsToUse.image && !resultsToUse.title) {
+      return (
+        <div className="wrapperLarge">
+          <a href={site} target="_blank">{site}</a>
+        </div>
+      )
+    }
+
     if(resultsToUse.products && !this.props.dontUseProduct){
       return this.renderLargeProduct(resultsToUse, imageClassName)
     } else if (resultsToUse.video && !this.props.dontUseVideo){
@@ -224,11 +232,9 @@ export default class OpengraphReactComponent extends Component {
         { feature }
         <div className={"textWrapperLarge"}>
           <div className={"siteNameLinkWrapper"}>
-            {/* <a >{resultsToUse.site_name}</a> */}
             <a>{resultsToUse.title}</a>
           </div>
           <div className={"titleWrapper"}>
-            {/* <p>{resultsToUse.title}</p> */}
           </div>
           <p>{resultsToUse.description}</p>
         </div>
@@ -247,11 +253,6 @@ export default class OpengraphReactComponent extends Component {
             <div className={"imgWrapperSmall"}>
               <img className={'responsiveImage'} src={resultsToUse.image} alt={'alt'}/>
             </div>
-            {/*{resultsToUse.image &&*/}
-
-            {/*<div className={'image'} style={{backgroundImage: `url("${resultsToUse.image}")`}}/>*/}
-
-            {/*}*/}
           </div>
           <div className={"textWrapperSmall"}>
             <div className={"siteNameLinkWrapper"}>
