@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 import styles from './App.css';
 import currencyMappings from './currencyMappings';
 
-export default class OpengraphReactComponent extends Component {
+export default class OpengraphReactComponent extends PureComponent {
   state = {
     result: null,
     error: null,
@@ -220,11 +220,13 @@ export default class OpengraphReactComponent extends Component {
         </div>
       )
     } else {
-      feature = (
-        <div className={"imgWrapperLarge"}>
-          <img className={imageClassName} src={resultsToUse.image} alt={'alt'}/>
-        </div>
-        );
+      if (resultsToUse.image !== '') {
+        feature = (
+          <div className={"imgWrapperLarge"}>
+            <img className={imageClassName} src={resultsToUse.image} alt={'alt'}/>
+          </div>
+          );
+      } else feature = (<></>);
     }
 
     return (
